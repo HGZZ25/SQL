@@ -1,0 +1,30 @@
+CREATE TABLE cerveceria (id INTEGER PRIMARY KEY, style TEXT, price INTEGER, rate INTEGER, year INTEGER);
+INSERT INTO cerveceria VALUES (1, "IPA", 25, 100, 2020);
+INSERT INTO cerveceria VALUES (2, "STOUT", 30,90,2021);
+INSERT INTO cerveceria VALUES (3, "LAGER", 20, 85, 2022);
+INSERT INTO cerveceria VALUES (4, "HAZY", 35, 99, 2023);
+INSERT INTO cerveceria VALUES (5, "MEXICAN LAGER", 25, 90, 2024);
+INSERT INTO cerveceria VALUES (6, "Low", 50, 100,2024);
+INSERT INTO cerveceria VALUES (7, "Fox", 45, 90, 2022);
+INSERT INTO cerveceria VALUES (8, "ALE", 30, 80, 2021);
+INSERT INTO cerveceria VALUES (9, "PORTER", 35, 80, 2020);
+INSERT INTO cerveceria VALUES (10, "MAPLE", 40, 85, 2020);
+INSERT INTO cerveceria VALUES (11, "Punk", 60, 100, 2020);
+INSERT INTO cerveceria VALUES (12, "INDIAN", 30, 90, 2021);
+INSERT INTO cerveceria VALUES (13, "L", 32, 95, 2020);
+INSERT INTO cerveceria VALUES (14, "BREAD", 33, 100, 2021);
+INSERT INTO cerveceria VALUES (15, "NEW YEAR", 40, 90, 2022);
+
+--display the database ordered by price.
+SELECT* FROM cerveceria 
+ORDER BY price desc;
+
+--what is the avg price of items in style section?
+SELECT AVG(price) "avg style price"
+FROM cerveceria
+order by year desc
+limit 6;
+
+
+
+
